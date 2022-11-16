@@ -14,6 +14,7 @@ let paused = true;
 function red() {
     src = document.getElementById("three-lines");
     img.src = "menu.png";
+    src.setAttribute("onclick", "moose()")
     src.appendChild(img);
 }
 
@@ -31,6 +32,9 @@ let count4 = 0;
 let count5 = 0;
 let count6 = 0;
 let count7 = 0;
+let arra = [];
+let container = document.querySelector(".container")
+
 
 function orange() {
     paused = false;
@@ -38,6 +42,7 @@ function orange() {
     let second = document.querySelector(".hackathons");
     supreme.removeChild(second);
     count2++;
+    arra.push("Hackathons");
     paused = true;
 }
 
@@ -49,6 +54,7 @@ function orangeback() {
     obj.setAttribute('class', 'hackathons heads all');
     obj.innerHTML = "Hackathons";
     count2--;
+    arra.pop();
     paused = true;
 }
 
@@ -58,6 +64,7 @@ function yellow() {
     cp = document.querySelector(".competitive-programming");
     supreme.removeChild(cp);
     count3++;
+    arra.push("Competitive Programming")
     paused = true;
 }
 
@@ -70,6 +77,7 @@ function yellowback() {
     obj.setAttribute('class', 'competitive-programming heads all');
     obj.innerHTML = "Competitive Programming";
     count3--;
+    arra.pop();
     paused = true;
 }
 
@@ -79,6 +87,7 @@ function blue() {
     ltc = document.querySelector(".learn-to-code");
     supreme.removeChild(ltc);
     count4++;
+    arra.push("Learn to Code");
     paused = true;
 }
 
@@ -91,6 +100,7 @@ function blueback() {
     obj.setAttribute('class', 'learn-to-code heads all');
     obj.innerHTML = "Learn to Code";
     count4--;
+    arra.pop();
     paused = true;
 }
 
@@ -100,6 +110,7 @@ function black() {
     ca = document.querySelector(".coding-aspects");
     supreme.removeChild(ca);
     count5++;
+    arra.push("Coding Fields");
     paused = true;
 }
 
@@ -112,6 +123,7 @@ function blackback() {
     obj.setAttribute('class', 'coding-aspects heads all');
     obj.innerHTML = "Coding Fields";
     count5--;
+    arra.pop();
     paused = true;
 }
 
@@ -121,6 +133,7 @@ function flow() {
     wic = document.querySelector(".what-is-coding");
     supreme.removeChild(wic);
     count6++;
+    arra.push("What is Coding?")
     paused = true;
 }
 
@@ -133,6 +146,7 @@ function flowback() {
     obj.setAttribute('class', 'what-is-coding heads all');
     obj.innerHTML = "What is Coding?";
     count6--;
+    arra.pop();
     paused = true;
 }
 
@@ -142,6 +156,7 @@ function grow() {
     lang = document.querySelector(".languages");
     supreme.removeChild(lang);
     count7++;
+    arra.push("Languages");
     paused = true;
 }
 
@@ -153,6 +168,7 @@ function growback() {
     obj.setAttribute('class', 'languages heads all');
     obj.innerHTML = "Languages";
     count7--;
+    arra.pop();
     paused = true;
 }
 
@@ -207,6 +223,26 @@ function resizeFn() {
 
 }
 
+let lucky = 0;
+
+function moose() {
+    if(lucky == 0) {
+        for(let i = 0; i < arra.length; i++) {
+            let object = document.createElement("div");
+            container.insertBefore(object, container.children[1]);
+            object.innerHTML = arra[i];
+            object.setAttribute("class","fun");
+        }
+        lucky++;
+    }
+    else{
+        for(let i = 0; i < arra.length; i++) {
+            container.removeChild(container.children[1])
+        }
+        lucky = 0;
+    }
+
+}
 
 window.onresize = resizeFn;
 resizeFn();
