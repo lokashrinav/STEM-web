@@ -19,6 +19,7 @@ body,html {
 
 .logo{
     cursor: pointer;
+    margin-top: 20px;
 }
 
 .header{
@@ -28,6 +29,7 @@ body,html {
     display: flex;
     align-items: center;
     font-family: 'Libre Baskerville', serif;
+    
 }
 
 .space{
@@ -37,6 +39,9 @@ body,html {
 
 .supreme{
     display: flex;
+    width: 100%;
+    justify-content: right;
+    margin-right: 15px;
 }
 
 .heads{
@@ -94,14 +99,21 @@ body,html {
     justify-self: right;
 }
 
+.fast{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    text-align: right;
+}
+
 .title{
     display: flex;
-    text-align: left;
     font-family: 'Silkscreen', cursive;
     font-size: 30px;
-    justify-self: left;
     cursor: pointer;
-
+    justify-self: right;
+    color: white;
+    margin-left: 25px;
 }
 
 a {
