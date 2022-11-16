@@ -46,7 +46,7 @@ function orangeback() {
     cp = document.querySelector(".competitive-programming");
     let obj = document.createElement("div");
     supreme.insertBefore(obj, supreme.children[5]);
-    obj.setAttribute('class', 'hackathons heads');
+    obj.setAttribute('class', 'hackathons heads all');
     obj.innerHTML = "Hackathons";
     count2--;
     paused = true;
@@ -67,7 +67,7 @@ function yellowback() {
     ltc = document.querySelector(".learn-to-code");
     let obj = document.createElement("div");
     supreme.insertBefore(obj, supreme.children[4]);
-    obj.setAttribute('class', 'competitive-programming heads');
+    obj.setAttribute('class', 'competitive-programming heads all');
     obj.innerHTML = "Competitive Programming";
     count3--;
     paused = true;
@@ -88,7 +88,7 @@ function blueback() {
     ca = document.querySelector(".coding-aspects");
     let obj = document.createElement("div");
     supreme.insertBefore(obj, supreme.children[3]);
-    obj.setAttribute('class', 'learn-to-code heads');
+    obj.setAttribute('class', 'learn-to-code heads all');
     obj.innerHTML = "Learn to Code";
     count4--;
     paused = true;
@@ -109,7 +109,7 @@ function blackback() {
     wic = document.querySelector(".what-is-coding");
     let obj = document.createElement("div");
     supreme.insertBefore(obj, supreme.children[2]);
-    obj.setAttribute('class', 'coding-aspects heads');
+    obj.setAttribute('class', 'coding-aspects heads all');
     obj.innerHTML = "Coding Fields";
     count5--;
     paused = true;
@@ -130,7 +130,7 @@ function flowback() {
     lang = document.querySelector(".languages");
     let obj = document.createElement("div");
     supreme.insertBefore(obj, supreme.children[1]);
-    obj.setAttribute('class', 'what-is-coding heads');
+    obj.setAttribute('class', 'what-is-coding heads all');
     obj.innerHTML = "What is Coding?";
     count6--;
     paused = true;
@@ -150,7 +150,7 @@ function growback() {
     paused = false;
     let obj = document.createElement("div");
     supreme.prepend(obj);
-    obj.setAttribute('class', 'languages heads');
+    obj.setAttribute('class', 'languages heads all');
     obj.innerHTML = "Languages";
     count7--;
     paused = true;
@@ -162,50 +162,51 @@ let widths = [1350, 1200, 1050, 900, 750, 600];
 function resizeFn() {
     var count = src.childElementCount;
 
-    if (window.innerWidth < widths[0] && count == 0 && paused == true) {
+    if (window.innerWidth < widths[0] && count == 0) {
         red();
     }
-    else if (window.innerWidth > widths[0] && count == 1 && paused == true) {
+    else if (window.innerWidth > widths[0] && count == 1) {
         green();
     }
-    else if(window.innerWidth < widths[0] && count2 == 0 && paused == true) {
+    else if(window.innerWidth < widths[0] && count2 == 0) {
         orange();
     }
-    else if(window.innerWidth > widths[0] && count2 == 1 && paused == true) {
+    else if(window.innerWidth > widths[0] && count2 == 1) {
         orangeback();
     }
-    else if(window.innerWidth < widths[1] && count3 == 0 && paused == true) {
+    else if(window.innerWidth < widths[1] && count3 == 0) {
         yellow();
     }
-    else if(window.innerWidth > widths[1] && count3 == 1 && paused == true) {
+    else if(window.innerWidth > widths[1] && count3 == 1) {
         yellowback();
     }
-    else if(window.innerWidth < widths[2] && count4 == 0 && paused == true) {
+    else if(window.innerWidth < widths[2] && count4 == 0) {
         blue();
     }
-    else if(window.innerWidth > widths[2] && count4 == 1 && paused == true) {
+    else if(window.innerWidth > widths[2] && count4 == 1) {
         blueback();
     }
-    else if(window.innerWidth < widths[3] && count5 == 0 && paused == true) {
+    else if(window.innerWidth < widths[3] && count5 == 0) {
         black();
     }
-    else if(window.innerWidth > widths[3] && count5 == 1 && paused == true) {
+    else if(window.innerWidth > widths[3] && count5 == 1) {
         blackback();
     }
-    else if(window.innerWidth < widths[4] && count6 == 0 && paused == true) {
+    else if(window.innerWidth < widths[4] && count6 == 0) {
         flow();
     }
-    else if(window.innerWidth > widths[4] && count6 == 1 && paused == true) {
+    else if(window.innerWidth > widths[4] && count6 == 1) {
         flowback();
     }
-    else if(window.innerWidth < widths[5] && count7 == 0 && paused == true) {
+    else if(window.innerWidth < widths[5] && count7 == 0) {
         grow();
     }
-    else if(window.innerWidth > widths[5] && count7 == 1 && paused == true) {
+    else if(window.innerWidth > widths[5] && count7 == 1) {
         growback();
     }
 
 }
+
 
 window.onresize = resizeFn;
 resizeFn();

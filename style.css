@@ -3,22 +3,35 @@ body,html {
     padding: 0;
 }
 
+.full{
+    width: 100%;
+    height: 100%;
+}
+
 .container{
     display: grid;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 840px;
+    background-image: url(Coder.jpg);
+    background-size: cover;
+}
+
+.logo{
+    cursor: pointer;
 }
 
 .header{
     width: 100%;
-    background-color: rgb(0, 225, 255);
+    background-color: rgba(0, 0, 0, 0.8);
     height: 100px;
     display: flex;
     align-items: center;
+    font-family: 'Libre Baskerville', serif;
+    
 }
 
 .space{
-    width: 5%;
+    width: 6%;
     height: 100px;
 }
 
@@ -28,11 +41,34 @@ body,html {
 
 .heads{
     text-align: center;
+    position: relative;
     min-width: 125px;
-    font-size: 20px;
+    font-size: 18px;
     color: white;
-    margin-right: 12px;
-    margin-left: 12px;
+    margin-right: 15px;
+    margin-left: 15px;
+    font-weight: bold;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.all::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    top: 40px;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: ease-out 0.25s;
+}
+
+.all:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 
 .five{
@@ -44,4 +80,11 @@ body,html {
     text-align: left;
     font-family: 'Silkscreen', cursive;
     font-size: 30px;
+    justify-self: left;
+    cursor: pointer;
+
+}
+
+a {
+    all: unset;
 }
