@@ -159,7 +159,7 @@ function flowback() {
     let a = document.createElement("a");
     obj.appendChild(a);
     a.setAttribute('href', "./whatiscoding.html");
-    a.innerHTML = "What is Coding?";
+    a.innerHTML = "Where to Code?";
     count6--;
     arra.pop();
     paused = true;
