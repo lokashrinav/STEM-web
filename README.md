@@ -2,7 +2,7 @@
 
 This website was created soley with HTML, CSS, and JavaScript.
 
-There is a bug that appears when you change the width of the screen that I'm unable to fix right now and plan to later.
+There is a bug that appears when you change the width of the screen that I'm unable to fix right now and plan to fix later.
 
 There are a total of 7 pages, including the title page. 
 
