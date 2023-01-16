@@ -193,49 +193,49 @@ function growback() {
 
 let widths = [1350, 1200, 1050, 900, 750, 600];
 
-function resizeFn() {
+function resizeFn() { //Note: This Javascript doesn't fully work as intended and may be bugged instead. 
     var count = src.childElementCount;
 
-    if (window.innerWidth < widths[0] && count == 0) {
+    if (window.innerWidth < widths[0] && count == 0) { //Creates three-lines which stores headings after window is less than 1350 in width
         red();
     }
-    else if (window.innerWidth > widths[0] && count == 1) {
+    else if (window.innerWidth > widths[0] && count == 1) { //Remove three-lines which stores headings after window is bigger than 1350 in width
         green();
     }
-    else if(window.innerWidth < widths[0] && count2 == 0) {
+    else if(window.innerWidth < widths[0] && count2 == 0) { /* If the window width is less than 1350, delete window and put it in title bar */
         orange();
     }
-    else if(window.innerWidth > widths[0] && count2 == 1) {
+    else if(window.innerWidth > widths[0] && count2 == 1) { /* If the window width is greater than 1350, add heading and delete it from title bar */
         orangeback();
     }
-    else if(window.innerWidth < widths[1] && count3 == 0) {
+    else if(window.innerWidth < widths[1] && count3 == 0) { /* If the window width is less than 1200, delete window and put it in title bar */
         yellow();
     }
-    else if(window.innerWidth > widths[1] && count3 == 1) {
+    else if(window.innerWidth > widths[1] && count3 == 1) { /* If the window width is greater than 1200, add heading and delete it from title bar */
         yellowback();
     }
-    else if(window.innerWidth < widths[2] && count4 == 0) {
+    else if(window.innerWidth < widths[2] && count4 == 0) { /* If the window width is less than 1050, delete window and put it in title bar */
         blue();
     }
-    else if(window.innerWidth > widths[2] && count4 == 1) {
+    else if(window.innerWidth > widths[2] && count4 == 1) { /* If the window width is greater than 1050, add heading and delete it from title bar */
         blueback();
     }
-    else if(window.innerWidth < widths[3] && count5 == 0) {
+    else if(window.innerWidth < widths[3] && count5 == 0) { /* If the window width is less than 900, delete window and put it in title bar */
         black();
     }
-    else if(window.innerWidth > widths[3] && count5 == 1) {
+    else if(window.innerWidth > widths[3] && count5 == 1) { /* If the window width is greater than 900, add heading and delete it from title bar */
         blackback();
     }
-    else if(window.innerWidth < widths[4] && count6 == 0) {
+    else if(window.innerWidth < widths[4] && count6 == 0) { /* If the window width is greater than 750, add heading and delete it from title bar */
         flow();
     }
-    else if(window.innerWidth > widths[4] && count6 == 1) {
+    else if(window.innerWidth > widths[4] && count6 == 1) { /* If the window width is greater than 750, add heading and delete it from title bar */
         flowback();
     }
-    else if(window.innerWidth < widths[5] && count7 == 0) {
+    else if(window.innerWidth < widths[5] && count7 == 0) { /* If the window width is less than 600, delete heading and put it in title bar */
         grow();
     }
-    else if(window.innerWidth > widths[5] && count7 == 1) {
+    else if(window.innerWidth > widths[5] && count7 == 1) { /* If the window width is greater than 600, add heading and delete it from title bar */
         growback();
     }
 
@@ -243,7 +243,7 @@ function resizeFn() {
 
 let lucky = 0;
 
-function moose() {
+function moose() { //If you click the three lines that pops up after the window reduces in width, the headers will pop up in rows
     if(lucky == 0) {
         for(let i = 0; i < arra.length; i++) {
             let object = document.createElement("div");
@@ -262,5 +262,5 @@ function moose() {
 
 }
 
-window.onresize = resizeFn;
+window.onresize = resizeFn; ///Resizes window
 resizeFn();
