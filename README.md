@@ -1,13 +1,24 @@
-# STEM-web 
+# ILOVECODE
 
-This website was created soley with HTML, CSS, and JavaScript. 
+## Overview
+ILOVECODE is a dynamic web application designed to introduce users to the world of coding. It provides an interactive experience that guides users through various coding concepts, languages, and resources.
 
-There is a bug that appears when you change the width of the screen that I'm unable to fix right now and plan to fix later. 
+## Features
+- Responsive design that adapts to different screen sizes.
+- Interactive menu that reveals coding topics as the window resizes.
+- Clear navigation to various coding resources and topics.
+- Each section contains links to detailed pages on coding languages, career options, and learning resources.
 
-There is also another bug with overlapping text and images that occurs when the width of the screen is too small, which I also plan to fix later. 
+## Technologies Used
+- HTML
+- CSS
+- JavaScript
+- [Google Fonts](https://fonts.google.com/) for typography
 
-There are a total of 7 pages, including the title page. Aside from the title page, there are several pages, including Languages, Where to Code?, Hackathons, Competitive Programming, Coding Jobs, and Where to Code. 
+## Usage
+- Resize the browser window to see the interactive menu adjust and reveal different coding topics.
+- Click on the three-line menu icon to show or hide the coding sections.
+- Explore various coding topics through the links provided.
 
-This website offers helpful tips to get started with coding and for people already experienced with coding and what they can do as coders.
-
-If you could give some feedback to improve this site, it would be helpful.
+## License
+- This project is licensed under the MIT License.
